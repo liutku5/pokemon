@@ -1,4 +1,4 @@
-let ballsWeHave = 2;
+let ballsWeHave = 5;
 
 document.querySelector("#pokeballs").value = ballsWeHave;
 document.querySelector("#pokeballsDisplay").innerText = ballsWeHave;
@@ -34,7 +34,6 @@ function playGame() {
             }
             break;
         case "3":
-            // document.querySelector("#pokemon").innerHTML = '<h1>Pokemonas</h1>';
             document.querySelector("#btn-container").innerHTML = "";
             gameStatus.value = 3;
             callStatus();
@@ -81,11 +80,13 @@ function printPokemonStats(data) {
     console.log(data.sprites.other.home.front_default);
     let output = document.querySelector("#pokemon-image");
     let HTML = `<h2>${data.name}</h2> <img src="${data.sprites.other.home.front_default}" alt="${data.name}">`;
-    HTML += `<h4>HP: ${data.stats[0].base_stat}</h4>`;
-    HTML += `<h4>Attack: ${data.stats[1].base_stat}</h4>`;
-    HTML += `<h4>Defense: ${data.stats[2].base_stat}</h4>`;
-    HTML += `<h4>Speed: ${data.stats[5].base_stat}</h4>`;
-
+    let modifiedHp = Math.round(data.stats[0].base_stat * (Math.random() * (1.3 - 0.7) + 0.7));
+    HTML += "<h4>HP: " + modifiedHp + "</h4>";
+    let modifiedAttack = Math.round(data.stats[1].base_stat * (Math.random() * (1.3 - 0.7) + 0.7));
+    HTML += "<h4>Attack: " + modifiedAttack + "</h4>"; 
+    let modifiedDefense = Math.round(data.stats[2].base_stat * (Math.random() * (1.3 - 0.7) + 0.7));
+    HTML += "<h4>Defense: " + modifiedDefense + "</h4>";
+    let modifiedSpeed = Math.round(data.stats[5].base_stat * (Math.random() * (1.3 - 0.7) + 0.7));
+    HTML += "<h4>Speed: " + modifiedSpeed + "</h4>";
     output.innerHTML = HTML;
-
 }
