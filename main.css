@@ -1,0 +1,17 @@
+.marLg {
+    height: 100px;
+}
+
+body {
+    text-align: center;
+}
+
+#pokemon-container {
+    height: 600px;
+}
+
+#pokemon {
+    height: 300px;
+    width: 150px;
+    background-color: green;
+}
