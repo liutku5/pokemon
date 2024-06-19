@@ -33,6 +33,8 @@
 
 .character{
     margin-top: 200px;
+    position: fixed;
+    margin-left: -720px;
 }
 
 .heightLg{
