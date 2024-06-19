@@ -108,4 +108,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     document.getElementById('player-name-display').innerText = playerName;
     document.getElementById('character-img-display').src = characterImg;
-});
+    console.log(playerName);
+})
