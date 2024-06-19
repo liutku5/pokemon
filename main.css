@@ -2,13 +2,41 @@
     height: 180px;
 }
 
-body {
+.body {
     text-align: center;
     background-image: url('./img/background.jpg'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
     color: rgb(0, 0, 0); 
+}
+
+.bodyIntro {
+
+    text-align: center;
+    background-image: url('./img/background-intro2.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: rgb(0, 0, 0); 
+}
+
+.form-check-label h3 {
+    margin: 0; 
+}
+
+.character-btn {
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.character{
+    margin-top: 200px;
+}
+
+.heightLg{
+    height: 800px;
 }
 
 #pokemon-container {

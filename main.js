@@ -100,3 +100,12 @@ function printPokemonStats(data) {
     HTML += "<h4>Speed: " + modifiedSpeed + "</h4>";
     output.innerHTML = HTML;
 }
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const characterImg = urlParams.get('characterImg');
+    const playerName = urlParams.get('playerName');
+
+    document.getElementById('player-name-display').innerText = playerName;
+    document.getElementById('character-img-display').src = characterImg;
+});
